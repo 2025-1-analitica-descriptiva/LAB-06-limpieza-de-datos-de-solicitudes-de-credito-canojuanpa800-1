@@ -75,7 +75,7 @@ def pregunta_01():
     El archivo limpio debe escribirse en "files/output/solicitudes_de_credito.csv"
 
     """
-file = 'files\input\solicitudes_de_credito.csv'
+file = 'files/input/solicitudes_de_credito.csv'
 
 df = pd.read_csv(file, encoding='utf-8', delimiter=';')
 # # Explorar el dataframe
@@ -134,4 +134,4 @@ df['barrio'] = df['barrio'].str.replace('_',' ')
 
 df = df.drop_duplicates()
 # show_uniques(df)
-save_df('./files/output/','solicitudes_de_credito.csv',df)
+save_df('./files/output','solicitudes_de_credito.csv',df)
